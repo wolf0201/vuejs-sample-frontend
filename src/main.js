@@ -2,11 +2,14 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from "./router"
 
-import ElementUI from 'element-ui'
-import locale from 'element-ui/lib/locale/lang/ja'
+import BootstrapVue from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue'
 
 Vue.config.productionTip = false
-Vue.use(ElementUI, {locale})
+
+// Bootstrap
+Vue.use(BootstrapVue)
 
 new Vue({
   router,
