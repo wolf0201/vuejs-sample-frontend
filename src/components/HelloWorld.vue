@@ -10,7 +10,7 @@
 </template>
 
 <script>
-  import axios from 'axios'
+  import api from './backend-api'
 
   export default {
     name: 'service',
@@ -24,7 +24,7 @@
     },
     methods: {
       callHelloApi () {
-        axios.get('http://localhost:8098/api/hello').then(response => {
+        api.hello().then(response => {
           this.backendResponse = response.data
           console.log(response.data)
         })
